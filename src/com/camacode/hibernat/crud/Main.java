@@ -16,7 +16,7 @@ public class Main {
 								.addAnnotatedClass(Employee.class)
 								.buildSessionFactory();
 		
-		Employee employee = new Employee("bkarim","Smaili","google");
+		Employee employee = new Employee("chaibe","maarouf","java");
 		
 		new SaveEmployee(employee, factory);
 
