@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.camacode.hibernat.demo.entity.Employee;
+import com.camacode.hibernat.demo.entity.RetrieveObjectFromData;
 import com.camacode.hibernat.demo.entity.SaveEmployee;
 
 public class Main {
@@ -16,10 +17,12 @@ public class Main {
 								.addAnnotatedClass(Employee.class)
 								.buildSessionFactory();
 		
-		Employee employee = new Employee("chaibe","maarouf","java");
+		//Employee employee = new Employee("chaibe","maarouf","java");
 		
-		new SaveEmployee(employee, factory);
-
+		//new SaveEmployee(employee, factory);
+		
+		int id = 3;
+		new RetrieveObjectFromData(factory, id);
 	}
 
 }
