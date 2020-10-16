@@ -2,24 +2,26 @@ package com.camacode.hibernat.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee")
+@Table(name="emplyee")
 public class Employee {
 	@Id
-	@Column
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private int id;
-	@Column
+	@Column(name="first_name")
 	private String firstName;
-	@Column
+	@Column(name="last_name")
 	private String lastName;
-	@Column
+	@Column(name="company")
 	private String company;
-	public Employee(int id, String firstName, String lastName, String company) {
+	public Employee( String firstName, String lastName, String company) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.company = company;
