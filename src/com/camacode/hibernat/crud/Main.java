@@ -3,6 +3,7 @@ package com.camacode.hibernat.crud;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.camacode.hibernat.demo.entity.DeleteEmployee;
 import com.camacode.hibernat.demo.entity.Employee;
 import com.camacode.hibernat.demo.entity.QueryCompany;
 import com.camacode.hibernat.demo.entity.RetrieveObjectFromData;
@@ -26,7 +27,10 @@ public class Main {
 		//new RetrieveObjectFromData(factory, id);
 		//Query Company
 		String company = "CET";
-		new QueryCompany(factory,company);
+		//new QueryCompany(factory,company);
+		
+		new DeleteEmployee(factory, id);
+		
 	}
 
 }
