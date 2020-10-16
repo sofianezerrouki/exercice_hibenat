@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.camacode.hibernat.demo.entity.Employee;
+import com.camacode.hibernat.demo.entity.QueryCompany;
 import com.camacode.hibernat.demo.entity.RetrieveObjectFromData;
 import com.camacode.hibernat.demo.entity.SaveEmployee;
 
@@ -22,7 +23,10 @@ public class Main {
 		//new SaveEmployee(employee, factory);
 		
 		int id = 3;
-		new RetrieveObjectFromData(factory, id);
+		//new RetrieveObjectFromData(factory, id);
+		//Query Company
+		String company = "CET";
+		new QueryCompany(factory,company);
 	}
 
 }
